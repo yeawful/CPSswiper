@@ -86,7 +86,20 @@ a:hover, button:hover {
   background: #7E7E82;
 }
 
+.swiper__gradient {
+  position: fixed;
+  width: 24px;
+  height: 72px;
+  background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.0001) 100%);
+  top: 96px;
+  right: 0;
+  z-index: 10;
+}
+
 @media (min-width: 768px) {
+  .swiper__gradient {
+    display: none;
+  }
   .brands-repair__title {
     padding: 16px 24px 16px;
   }
