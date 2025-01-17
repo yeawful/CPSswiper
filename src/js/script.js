@@ -20,6 +20,15 @@ function initSwiper() {
                     el: swiperPagination,
                     type: 'bullets',
                     clickable: true,
+
+                    renderBullet: function (index, className) {
+                        // Ограничиваем количество буллетов до 9
+                        if (index < 9) {
+                            return `<span class="${className}"></span>`;
+                        }
+                        return ''; // Не отображаем буллеты после 9
+                    },
+
                 } : false,
                 simulateTouch: true,
                 grabCursor: true,
