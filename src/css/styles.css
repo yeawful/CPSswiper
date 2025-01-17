@@ -1,4 +1,4 @@
-@import '/src/fonts/font.css';
+@import 'src/fonts/font.css';
 @import 'reset.css';
 html {
   font-size: 14px;
