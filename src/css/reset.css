@@ -1,0 +1,102 @@
+/***
+    The new CSS reset - version 1.11.2 (last updated 15.11.2023)
+    GitHub page: https://github.com/elad2412/the-new-css-reset
+***/
+
+/* Этот блок кода сбрасывает все стили для всех элементов, кроме указанных (html, iframe, canvas, img, svg, video, audio и их дочерних элементов). Свойство all: unset; удаляет все стили, кроме display, которое возвращается к значению по умолчанию (revert). */
+ *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Этот блок задает значение border-box для свойства box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Этот блок предотвращает изменение размера шрифта в мобильном Safari при переходе в альбомный режим */
+html {
+    -moz-text-size-adjust: none;
+    -webkit-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* Этот блок возвращает курсор к значению по умолчанию для ссылок (a) и кнопок (button) */
+a, button {
+    cursor: revert;
+}
+
+/* Этот блок удаляет маркеры списков (пункты и нумерацию) для элементов ol, ul, menu и summary */
+ol, ul, menu, summary {
+    list-style: none;
+}
+
+/* Этот блок ограничивает размер изображений, чтобы они не превышали размеры их контейнера */
+img {
+    max-inline-size: 100%;
+    max-block-size: 100%;
+}
+
+/* Этот блок удаляет промежутки между ячейками в таблицах. */
+table {
+    border-collapse: collapse;
+}
+
+/* Этот блок решает проблему в Safari, когда user-select: none на элементе <body> мешает работе текстовых полей ввода */
+input, textarea {
+    -webkit-user-select: auto;
+}
+
+/* Этот блок возвращает свойство white-space к значению по умолчанию для элементов textarea в Safari */
+textarea {
+    white-space: revert;
+}
+
+/* Этот блок позволяет стилизовать элемент meter, возвращая свойство appearance к значению по умолчанию */
+meter {
+    -webkit-appearance: revert;
+    appearance: revert;
+}
+
+/* Этот блок возвращает все стили к значению по умолчанию для элемента pre и задает box-sizing: border-box. */
+:where(pre) {
+    all: revert;
+    box-sizing: border-box;
+}
+
+/* Этот блок сбрасывает цвет текста для псевдоэлемента ::placeholder*/
+::placeholder {
+    color: unset;
+}
+
+/* Этот блок скрывает элементы с атрибутом hidden */
+:where([hidden]) {
+    display: none;
+}
+
+/* Этот блок исправляет ошибку в браузерах на основе Chromium и Safari для элементов с атрибутом contenteditable */
+:where([contenteditable]:not([contenteditable="false"])) {
+    -moz-user-modify: read-write;
+    -webkit-user-modify: read-write;
+    overflow-wrap: break-word;
+    -webkit-line-break: after-white-space;
+    -webkit-user-select: auto;
+}
+
+/* Этот блок возвращает возможность перетаскивания для элементов с атрибутом draggable="true" в Chromium и Safari */
+:where([draggable="true"]) {
+    -webkit-user-drag: element;
+}
+
+/* Этот блок возвращает все стили к значению по умолчанию для модальных диалогов и задает box-sizing: border-box */
+:where(dialog:modal) {
+    all: revert;
+    box-sizing: border-box;
+}
+
+/* Этот блок удаляет стили маркера для элементов details в WebKit-браузерах */
+::-webkit-details-marker {
+    display: none;
+}

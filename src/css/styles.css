@@ -1,0 +1,148 @@
+@import '/src/fonts/font.css';
+@import 'reset.css';
+html {
+  font-size: 14px;
+  line-height: 18px;
+  color: #1B1C21;
+  font-family: TT Lakes, sans-serif;
+  box-sizing: border-box;
+}
+html, html::before, html::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #F8F8F8;
+}
+
+a, button {
+  text-decoration: none;
+  background-color: inherit;
+  color: inherit;
+  border: none;
+}
+a:hover, button:hover {
+  cursor: pointer;
+}
+
+.brands-repair__title {
+  padding: 16px 16px 16px;
+  border-top: 1px solid #D9FFF5;
+  color: #7E7E82;
+  background: linear-gradient(to right, #F8F8F8 0%, #FFFFFF 100%);
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+.brands-repair__list {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 16px;
+  list-style: none;
+}
+.brands-repair__item {
+  min-width: 240px;
+  height: 72px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+.brands-repair__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #EAEAEA;
+  border-radius: 6px;
+  transition: all 0.1s ease-in-out;
+}
+.brands-repair__link img {
+  max-height: 40px;
+}
+.brands-repair__expand-button {
+  display: none;
+}
+
+.swiper-pagination {
+  display: flex;
+  gap: 12px;
+  position: static;
+  margin: 0 auto 24px;
+  height: 40px;
+  flex-direction: row;
+}
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: #DDDDDD;
+  opacity: 1;
+}
+.swiper-pagination-bullet-active {
+  background: #7E7E82;
+}
+
+@media (min-width: 768px) {
+  .brands-repair__title {
+    padding: 16px 24px 16px;
+  }
+  .brands-repair__list {
+    flex-wrap: wrap;
+    max-height: 160px;
+    overflow: hidden;
+    gap: 16px 24px;
+    margin: 24px 24px 0;
+    transition: all 0.2s ease-in-out;
+  }
+  .brands-repair__list--expanded {
+    max-height: 540px;
+    transition: all 0.2s ease-in-out;
+  }
+  .brands-repair__item {
+    min-width: 224px;
+  }
+  .brands-repair__expand-button {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin: 24px 0 34px 32px;
+  }
+  .brands-repair__expand-button--rotated img {
+    transform: rotate(180deg);
+    transition: all 0.15s ease-in-out;
+  }
+  .brands-repair__expand-button img {
+    transition: all 0.15s ease-in-out;
+  }
+  .brands-repair__expand-description {
+    font-family: TT Lakes, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-align: left;
+  }
+}
+@media (min-width: 1120px) {
+  .brands-container {
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+  .brands-repair__title {
+    padding: 16px 32px 16px;
+  }
+  .brands-repair__list {
+    column-gap: 32px;
+    margin: 24px 32px 0;
+  }
+  .brands-repair__item {
+    width: 240px;
+  }
+  .brands-repair__expand-button {
+    margin: 24px 0 34px 40px;
+  }
+}/*# sourceMappingURL=styles.css.map */

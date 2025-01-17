@@ -1,0 +1,144 @@
+@import '/src/fonts/font.css'
+@import 'reset.css'
+
+html
+  font-size: 14px
+  line-height: 18px
+  color: #1B1C21
+  font-family: TT Lakes, sans-serif
+  box-sizing: border-box
+
+  &, &::before, &::after
+    box-sizing: inherit
+    margin: 0
+    padding: 0
+
+body
+  background-color: #F8F8F8
+
+a, button
+  text-decoration: none
+  background-color: inherit
+  color: inherit
+  border: none
+
+  &:hover
+    cursor: pointer
+
+.brands-repair
+  &__title
+    padding: 16px 16px 16px
+    border-top: 1px solid #D9FFF5
+    color: #7E7E82
+    background: linear-gradient(to right, #F8F8F8 0%, #FFFFFF 100%)
+    font-size: 16px
+    line-height: 24px
+    letter-spacing: -0.2px
+    font-weight: normal
+    text-transform: uppercase
+
+  &__list
+    display: flex
+    flex-wrap: nowrap
+    align-items: center
+    margin: 16px
+    list-style: none
+
+  &__item
+    min-width: 240px
+    height: 72px
+    background-color: #FFFFFF
+    border-radius: 6px
+    box-sizing: border-box
+
+  &__link
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 15px
+    border: 1px solid #EAEAEA
+    border-radius: 6px
+    transition: all 0.1s ease-in-out
+
+    img
+      max-height: 40px
+
+  &__expand-button
+    display: none
+
+.swiper-pagination
+  display: flex
+  gap: 12px
+  position: static
+  margin: 0 auto 24px
+  height: 40px
+  flex-direction: row
+
+  &-bullet
+    width: 12px
+    height: 12px
+    background: #DDDDDD
+    opacity: 1
+
+    &-active
+      background: #7E7E82
+
+@media (min-width: 768px)
+  .brands-repair
+    &__title
+      padding: 16px 24px 16px
+
+    &__list
+      flex-wrap: wrap
+      max-height: 160px
+      overflow: hidden
+      gap: 16px 24px
+      margin: 24px 24px 0
+      transition: all 0.2s ease-in-out
+
+      &--expanded
+        max-height: 540px
+        transition: all 0.2s ease-in-out
+
+    &__item
+      min-width: 224px
+
+    &__expand-button
+      display: flex
+      align-items: center
+      gap: 16px
+      margin: 24px 0 34px 32px
+
+      &--rotated img
+        transform: rotate(180deg)
+        transition: all 0.15s ease-in-out
+
+      img
+        transition: all 0.15s ease-in-out
+
+    &__expand-description
+      font-family: TT Lakes, sans-serif
+      font-size: 16px
+      font-weight: 500
+      line-height: 24px
+      letter-spacing: -0.2px
+      text-align: left
+
+@media (min-width: 1120px)
+  .brands-container
+    max-width: 1120px
+    margin: 0 auto
+
+  .brands-repair
+    &__title
+      padding: 16px 32px 16px
+
+    &__list
+      column-gap: 32px
+      margin: 24px 32px 0
+
+    &__item
+      width: 240px
+
+    &__expand-button
+      margin: 24px 0 34px 40px
