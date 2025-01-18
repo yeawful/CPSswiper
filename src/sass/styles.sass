@@ -154,3 +154,23 @@ a, button
 
     &__expand-button
       margin: 24px 0 34px 40px
+
+@media (min-width: 768px) and (max-width: 1120px)
+  .brands-repair
+    &__list
+      justify-content: space-between
+      margin: 16px 24px
+
+    &__item
+      width: calc(33.333% - 16px)
+      min-width: auto
+      flex-grow: 1
+      transition: all 0.3s ease-in-out
+
+    &__expand-button
+      margin: 24px 0 34px 32px // Возвращаем кнопку влево, как при 1120px
+
+@media (min-width: 1120px)
+  .brands-repair
+    &__item
+      width: calc(25% - 24px)
