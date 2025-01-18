@@ -15,6 +15,7 @@ function initSwiper() {
             swiperSlides.forEach(slide => slide.classList.add('swiper-slide'));
 
             // Инициализация Swiper
+            // eslint-disable-next-line no-undef
             swiperInstance = new Swiper('.brands-repair__content', {
                 pagination: swiperPagination ? {
                     el: swiperPagination,
